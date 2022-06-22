@@ -9,5 +9,18 @@
         android:id="@+id/mainFragment"
         android:name="com.example.fragment.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_displayMessageFragment"
+            app:destination="@id/displayMessageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayMessageFragment"
+        android:name="com.example.fragment.ui.display.DisplayMessageFragment"
+        android:label="fragment_display_message"
+        tools:layout="@layout/fragment_display_message" >
+        <action
+            android:id="@+id/action_displayMessageFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>
