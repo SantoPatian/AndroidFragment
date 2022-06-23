@@ -22,5 +22,8 @@
         <action
             android:id="@+id/action_displayMessageFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="receivedMessage"
+            app:argType="string" />
     </fragment>
 </navigation>

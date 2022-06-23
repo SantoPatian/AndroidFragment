@@ -1,4 +1,6 @@
 package com.example.fragment.core
 
-class Constants {
+object Constants {
+    //Apps
+    const val TAG = "Fragment"
 }
