@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.fragment.R
+import com.example.fragment.databinding.FragmentDisplayMessageBinding
 
 class DisplayMessageFragment : Fragment() {
 
@@ -14,17 +15,19 @@ class DisplayMessageFragment : Fragment() {
         fun newInstance() = DisplayMessageFragment()
     }
 
+    private lateinit var binding: FragmentDisplayMessageBinding
     private lateinit var viewModel: DisplayMessageViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_display_message, container, false)
+    ): View {
+        binding = FragmentDisplayMessageBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(DisplayMessageViewModel::class.java)
         // TODO: Use the ViewModel
     }
