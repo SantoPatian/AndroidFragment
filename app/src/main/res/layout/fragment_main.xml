@@ -32,6 +32,7 @@
         android:autofillHints="Type your Message"
         android:hint="@string/type_your_message"
         android:inputType="textMultiLine|textCapSentences|textAutoComplete"
+        android:textSize="24sp"
         android:maxLines="5"
         android:minLines="3"
         android:textColorHint="#757575"
